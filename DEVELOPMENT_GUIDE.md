@@ -42,15 +42,59 @@ python check_environment.py
 
 ### 2.1 代码风格
 - 遵循PEP 8规范
-- 使用flake8进行静态检查
-- 类型提示(Type Hints)强制要求
+- 使用以下工具保证代码质量：
+  - **Black**: 自动格式化Python代码
+  - **Flake8**: 检查代码风格
+  - **Mypy**: 静态类型检查
+
+运行检查：
+```bash
+# 格式化代码
+black .
+
+# 检查代码风格
+flake8 .
+
+# 类型检查
+mypy .
+```
+
+配置说明：
+- 行长度限制: 88字符
+- 类型检查严格模式
+- 复杂度限制: 10
 
 ### 2.2 文档要求
 - 所有公共API必须包含docstring
 - 模块级文档包含在README.md中
 - 复杂算法需要注释说明
 
-## 3. 提交流程
+## 3. CI/CD流程
+
+### 3.1 GitHub Actions
+项目使用GitHub Actions实现持续集成：
+- 每次push或PR触发
+- 自动运行测试
+- 检查代码风格和类型
+- 必须通过所有检查才能合并
+
+[查看CI配置](.github/workflows/ci.yml)
+
+### 3.2 本地验证
+提交前请确保通过以下检查：
+```bash
+# 运行测试
+python -m pytest tests/
+
+# 格式化代码
+black .
+
+# 静态检查
+flake8 .
+mypy .
+```
+
+## 4. 提交流程
 
 ### 3.1 分支策略
 ```mermaid
