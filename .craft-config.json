@@ -1,0 +1,33 @@
+{
+  "project": "AI-Core-Enhancement",
+  "version": "2.0.0",
+  "ai_assistant": {
+    "contact": "通过工程README提交issue",
+    "change_log": "docs/CHANGELOG.md",
+    "autonomy_level": "high",
+    "knowledge_base": {
+      "enabled": true,
+      "auto_backup": true,
+      "retention_days": 30,
+      "storage_path": "knowledge_base"
+    },
+    "autopilot": {
+      "enabled": true,
+      "max_self_repair": 3,
+      "health_check_interval": 3600
+    }
+  },
+  "modules": [
+    "policy_enforcer",
+    "permission_manager", 
+    "audit_logger",
+    "knowledge_mgr",
+    "ai_autopilot"
+  ],
+  "safety_controls": {
+    "require_human_approval": [
+      "delete_production_data",
+      "change_core_permissions"
+    ]
+  }
+}
