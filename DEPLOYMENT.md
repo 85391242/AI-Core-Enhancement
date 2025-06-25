@@ -5,18 +5,47 @@
 - Python 3.8+
 - Git 2.30+
 
-## 快速开始
+## 本地部署指南
 
-### 1. 克隆仓库
+### 1. 环境准备
+- 确保系统已安装：
+  - Python 3.8+
+  - Git 2.30+
+  - 推荐使用Windows 10/11或Linux/macOS
+
+### 2. 获取代码
 ```bash
 git clone https://github.com/85391242/AI-Core-Enhancement.git
 cd AI-Core-Enhancement
 ```
 
-### 2. 设置Python虚拟环境
+### 3. 设置隔离环境
 ```bash
+# 创建虚拟环境
 python -m venv .venv
+
+# 激活虚拟环境
+# Windows:
+.venv\Scripts\activate
+# Linux/macOS:
+source .venv/bin/activate
+
+# 安装依赖
+pip install -r requirements.txt
 ```
+
+### 4. 运行应用
+```bash
+# 启动主程序
+python start_autopilot.py
+
+# 或使用开发模式(带热重载)
+python -m flask run --debug
+```
+
+### 5. 验证部署
+- 访问 http://localhost:5000
+- 检查控制台输出是否正常
 
 #### Windows激活环境：
 ```bash
