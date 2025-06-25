@@ -7,6 +7,15 @@
 
 ## 本地部署指南
 
+### 一键部署 (推荐)
+```bash
+# Windows系统直接双击运行
+deploy_local.bat
+
+# 或命令行执行
+./deploy_local.bat
+```
+
 ### 1. 环境准备
 - 确保系统已安装：
   - Python 3.8+
