@@ -1,3 +1,4 @@
-backups/
-*.bak
-.env
+# 忽略文件
+node_modules/
+.DS_Store
+*.tmp
