@@ -14,6 +14,11 @@ deploy_local.bat
 
 # 或命令行执行
 ./deploy_local.bat
+
+# 如果出现乱码问题：
+# 1. 确保系统区域设置为中文(简体，中国)
+# 2. 或者手动执行：chcp 65001 切换为UTF-8编码
+# 3. 使用新版Windows终端(Windows Terminal)
 ```
 
 ### 1. 环境准备

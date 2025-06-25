@@ -1,4 +1,5 @@
 @echo off
+chcp 65001 >nul
 echo === AI-Core-Enhancement 本地一键部署脚本 ===
 echo 正在检查Python环境...
 
