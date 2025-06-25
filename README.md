@@ -3,6 +3,13 @@
 ## 概述
 本项目旨在通过规范化操作增强AI核心能力，建立统一的开发标准和最佳实践。
 
+## 快速部署
+1. 克隆仓库：`git clone https://github.com/85391242/AI-Core-Enhancement.git`
+2. 设置环境：参考[部署指南](DEPLOYMENT.md)完成Python环境和依赖配置
+3. 启动系统：`python start_autopilot.py`
+
+详细部署说明请查看[DEPLOYMENT.md](DEPLOYMENT.md)文档
+
 ## 核心标准
 - 模块化设计原则
 - 接口标准化规范
