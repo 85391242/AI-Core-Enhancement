@@ -1,0 +1,27 @@
+{
+  "session_context": {
+    "last_modified": "2023-11-20T15:30:00Z",
+    "current_version": "1.1.0",
+    "active_modules": [
+      "policy_enforcer",
+      "permission_manager",
+      "audit_logger"
+    ]
+  },
+  "recovery_guide": {
+    "restore_steps": [
+      "1. 检查.craft-config.json中的模块配置",
+      "2. 验证CHANGELOG.md中的最新变更",
+      "3. 执行测试验证核心功能: python -m tests.validation_plan",
+      "4. 通过README中的AI协作部分恢复上下文"
+    ],
+    "key_files": [
+      ".craft-config.json",
+      "docs/CHANGELOG.md",
+      "README.md",
+      "modules/policy_enforcer.py",
+      "modules/permission_manager.py",
+      "modules/audit_logger.py"
+    ]
+  }
+}
