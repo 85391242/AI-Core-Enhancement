@@ -1,9 +1,0 @@
-{
-  "problem": "终端显示乱码问题",
-  "solution": {
-    "solution": "统一使用UTF-8编码",
-    "command": "chcp 65001"
-  },
-  "timestamp": "2025-06-25T23:42:52.764502",
-  "verified": false
-}

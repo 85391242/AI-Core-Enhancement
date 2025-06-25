@@ -1,8 +1,39 @@
+print('开始导入模块...')
 #!/usr/bin/env python3
 """智能中枢核心引擎（完整实现版）"""
 import time
 from enum import Enum
 
+
+class PerformanceMonitor:
+    """最小化性能监控器"""
+    def __init__(self):
+        self.metrics = {
+            "cycle_time": [],
+            "complexity": []
+        }
+    
+    def record_cycle(self, duration, complexity):
+        """记录执行周期指标"""
+        self.metrics["cycle_time"].append(duration)
+        self.metrics["complexity"].append(complexity)
+        return True
+class KnowledgeManager:
+    """最小化知识管理器实现"""
+    def __init__(self):
+        self.knowledge_base = {}
+    
+    def generate_plan(self, visual_feedback=None):
+        """生成基本执行计划"""
+        return {
+            "steps": ["default_operation"],
+            "complexity": 1,
+            "priority": "normal"
+        }
+    
+    def get_context(self):
+        """获取基本上下文"""
+        return {"status": "ready"}
 class OperationMode(Enum):
     AUTO = 1
     INTERACTIVE = 2
@@ -10,6 +41,13 @@ class OperationMode(Enum):
 
 class Autopilot:
     def __init__(self):
+        print("Autopilot类初始化开始")
+        print("初始化工作流引擎...")
+        self.workflow_engine = WorkflowEngine()
+        print("初始化可视化系统...")
+        # 临时简化实现
+        self.visual_system = None  
+        print("核心组件初始化完成")
         # 初始化完整模块系统
         self.modules = {
             'workflow': WorkflowEngine(),
@@ -26,7 +64,6 @@ class Autopilot:
         self.visual_components = VisualComponents()
         
     def run(self, mode=OperationMode.AUTO):
-        """增强版主运行循环"""
         try:
             while True:
                 start_time = time.time()
@@ -88,9 +125,25 @@ class VisualizationBridge:
 
 if __name__ == '__main__':
     # 支持多种启动模式
+    print("基础模块导入完成")
     import argparse
+    print("argparse模块导入完成")
+
+    try:
+        from enum import Enum
+        print("enum模块导入完成")
+    except ImportError as e:
+        print(f"无法导入enum模块: {e}")
+    
+    print("初始化参数解析器...")
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', choices=['auto','interactive','debug'])
     args = parser.parse_args()
+    print(f"运行模式设置为: {args.mode}")
     
-    Autopilot().run(mode=OperationMode[args.mode.upper()])
+    try:
+        print("启动Autopilot主程序...")
+        Autopilot().run(mode=OperationMode[args.mode.upper()])
+    except Exception as e:
+        print(f"主程序执行异常: {str(e)}")
+        raise

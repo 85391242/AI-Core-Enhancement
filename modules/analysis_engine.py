@@ -390,4 +390,5 @@ class CapabilityAnalyzer:
             # 分段比较
             internal_paragraphs = internal_content.split("\n\n")
             for i, para in enumerate(internal_paragraphs):
-                if len(para) < 50:  # 忽略太短的段
+                if len(para) < 50:  # 忽略太短的段落
+                    continue
